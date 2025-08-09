@@ -7,7 +7,9 @@ from pydantic import BaseModel
 import jwt
 
 
-""""Working with Fastapis"""
+""""
+This is a demo of my Working with Fastapis
+"""
 
 app = FastAPI() #initializing fastapi to app
 
@@ -91,5 +93,7 @@ def dependencies_1():
 
 @app.get("/me")
 def root(result=Depends(dependencies_1)):
-    final = result + 90 -13
+    final = result + 90 - 13
     return {"Message": "Our first api endpoint", "final result":final}
+
+#error handling
